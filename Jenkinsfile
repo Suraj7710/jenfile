@@ -43,7 +43,7 @@ pipeline{
 				}
 				stage("stage-3"){
 					steps{
-					sh "docker run -itdp 8080:80 --name 23Q3 httpd"
+					sh "docker run -itdp 7070:80 --name 23Q3 httpd"
 					sh "docker cp /mnt/project/23Q3/indexfile/index.html 23Q3:/usr/local/apache2/htdocs/"
 					}
 			}
