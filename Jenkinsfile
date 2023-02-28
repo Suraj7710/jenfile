@@ -10,6 +10,7 @@ pipeline{
 				sh "yum install git -y"
 				sh "yum install docker -y"
 				sh "service docker start"
+				sh "docker stop 23Q1 23Q2 23Q3"
 				sh "docker system prune -a -f"
 				sh "rm -rf /mnt/project/*"
 				dir("/mnt/project/23Q1"){
