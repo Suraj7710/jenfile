@@ -44,6 +44,7 @@ pipeline{
 					steps{
 					sh "docker run -itdp 8081:80 --name 23Q3 suraj7710/testimage1"
 					sh "docker cp /mnt/project/23Q3/indexfile/index.html 23Q3:/usr/local/apache2/htdocs/"
+					}
 			}
 		}
 		
