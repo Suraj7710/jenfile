@@ -23,7 +23,7 @@ pipeline{
 				}
 				dir("/mnt/project/23Q3"){
 					sh "git clone https://github.com/Suraj7710/indexfile.git -b 23Q3"
-          sh "chmod 777 /mnt/project/indexfile/index.html"
+                                        sh "chmod 777 /mnt/project/indexfile/index.html"
 				}
 			}
 		}
