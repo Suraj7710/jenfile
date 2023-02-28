@@ -30,19 +30,19 @@ pipeline{
 			parallel{
 				stage("stage-1"){
 					steps{
-					sh "docker run -itdp 80:80 --name 23Q1 suraj7710/surajubuntu"
+					sh "docker run -itdp 80:80 --name 23Q1 suraj7710/surajubuntu:1.0"
 					sh "docker cp /mnt/project/23Q1/indexfile/index.html 23Q1:/usr/local/apache2/htdocs/" 
 					}
 				}
 				stage("stage-2"){
 					steps{
-					sh "docker run -itdp 90:80 --name 23Q2 suraj7710/surajubuntu"
+					sh "docker run -itdp 90:80 --name 23Q2 suraj7710/surajubuntu:1.0"
 					sh "docker cp /mnt/project/23Q2/indexfile/index.html 23Q2:/usr/local/apache2/htdocs/" 
 					}
 				}
 				stage("stage-3"){
 					steps{
-					sh "docker run -itdp 8081:80 --name 23Q3 suraj7710/surajubuntu"
+					sh "docker run -itdp 8081:80 --name 23Q3 suraj7710/surajubuntu1.0"
 					sh "docker cp /mnt/project/23Q3/indexfile/index.html 23Q3:/usr/local/apache2/htdocs/"
 					}
 			}
